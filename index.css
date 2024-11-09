@@ -15,7 +15,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: #333;
+    background-color: #ABC4A5;
 }
 
 .navbar .logo img {
@@ -41,4 +41,57 @@ body {
 
 .nav-links a:hover {
     color: #ddd;
+}
+
+/* styles.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Dialogue box styling */
+.dialogue-box {
+    position: fixed;
+    bottom: 25%; /* Positioned near the bottom of the screen */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f4f4f9;
+    padding: 1.5rem;
+    width: 90%;
+    height: 40%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    border: 2px solid #333;
+    align-items: center;
+}
+
+.character-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.dialogue-text {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Continue button */
+.continue-btn {
+    padding: 0.5rem 1rem;
+    margin-top: 30%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: right;
+}
+
+.continue-btn:hover {
+    text-decoration:underline;
 }
