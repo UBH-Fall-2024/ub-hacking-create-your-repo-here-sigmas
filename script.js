@@ -11,12 +11,14 @@ const dialogues = [
 let currentDialogueIndex = 0;
 
 function nextDialogue() {
-    currentDialogueIndex++;
-    if (currentDialogueIndex < dialogues.length) {
+    if (currentDialogueIndex < dialogues.length - 1) {
         // Update the dialogue text with the next line
+        currentDialogueIndex++;
         document.getElementById("dialogue-text").innerText = dialogues[currentDialogueIndex];
     } else {
-        // Hide the dialogue box once the dialogue sequence is complete
-        document.getElementById("dialogue-box").style.display = "none";
+        document.getElementById("dialogue-box").style.display = "None";
+        console.log('hello testing')
+        const buttonContainer = document.querySelector(".button-container");
+        buttonContainer.innerHTML = '<input type="text" class="user-input" placeholder="Type your response..." />';
     }
 }
