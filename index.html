@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Navbar</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo">
+            <img src="./test1.png" alt="Logo" />
+        </a>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- Overlay for background dimming -->
+    <div class="overlay" id="overlay"></div>
+    
+    <!-- Dialogue box -->
+    <div class="dialogue-box" id="dialogue-box">
+        <p class="dialogue-text" id="dialogue-text"></p>
+        <div class="button-container">
+            <button class="continue-btn" onclick="nextDialogue()">Continue</button>
+        </div>    
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
