@@ -109,3 +109,49 @@ body {
 .user-input:focus {
     border-color: #333;
 }
+
+/* Input container styling */
+.input-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* User input styling */
+.user-input {
+    flex: 1; /* Take up available space */
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    margin-right: 0.5rem; /* Space between input and button */
+}
+
+.user-input:focus {
+    border-color: #333;
+}
+
+/* Enter button styling */
+.enter-btn {
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.enter-btn:hover {
+    background-color: #555;
+}
