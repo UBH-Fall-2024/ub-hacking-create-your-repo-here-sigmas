@@ -2,8 +2,7 @@
 
 // Array of dialogue lines
 const dialogues = [
-    "This is the first line of dialogue.",
-    "Here’s the second line with more information.",
+    "Hop in! Let's turn your story into a comic adventure!",
     "Another line of dialogue, moving the story forward.",
     "Final line of dialogue for this sequence."
 ];
@@ -24,7 +23,7 @@ function nextDialogue() {
         inputContainer.classList.add("input-container");
 
         // Create an input element
-        const userInput = document.createElement("input");
+        const userInput = document.createElement("textarea");
         userInput.type = "text";
         userInput.classList.add("user-input");
         userInput.placeholder = "Type your response...";
