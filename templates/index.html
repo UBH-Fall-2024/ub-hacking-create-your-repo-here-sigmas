@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Navbar</title>
+    <!-- Use Flask's url_for to reference CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/liza.css') }}">
+</head>
+<body class="fade-in">
+    <div class="stars">
+        <div class="star" style="top: 50%; left: 20%;"></div>
+        <div class="star" style="top: 15%; left: 80%;"></div>
+        <!-- Other star divs remain unchanged -->
+    </div>
+
+    <nav class="navbar">
+        <a href="#" class="logo">
+            <img src="{{ url_for('static', filename='images/logo1.png') }}" alt="Logo">
+        </a>
+        <div class="small-title">WonderStrip</div>
+    </nav>
+
+    <!-- Overlay for background dimming -->
+    <div class="overlay" id="overlay"></div>
+
+    <a href="#" class="rabbit">
+        <img src="{{ url_for('static', filename='images/rabbit1.PNG') }}" alt="Rabbit">
+    </a>
+
+    <!-- Dialogue box -->
+    <div class="dialogue-box" id="dialogue-box">
+        <p class="dialogue-text" id="dialogue-text">
+            <span class="welcome-text">Hop in! Let's turn your story into a comic adventure!</span><br>
+        </p>        
+        <button class="continue-btn" onclick="nextDialogue()">Continue</button>
+    </div>
+
+    <!-- Use Flask's url_for to reference JS -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

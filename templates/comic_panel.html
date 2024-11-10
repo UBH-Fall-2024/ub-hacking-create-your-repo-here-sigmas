@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comic Panel {{ panel_number }}</title>
+    <!-- Link to liza.css for styling -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/liza.css') }}">
+</head>
+<body class="fade-in">
+    <header class="navbar">
+        <a href="#" class="logo">
+            <img src="{{ url_for('static', filename='images/logo1.png') }}" alt="Logo">
+        </a>
+        <h1 class="small-title">Comic Panel {{ panel_number }} of {{ total_panels }}</h1>
+    </header>
+
+    <main>
+        <section class="dialogue-box">
+            <h2>Scene:</h2>
+            <p>{{ panel['scene'] }}</p>
+        </section>
+
+        <section class="dialogue-box">
+            <h2>Actions:</h2>
+            <p>{{ panel['actions'] }}</p>
+        </section>
+
+        <section class="dialogue-box">
+            <h2>Dialogue:</h2>
+            <p>{{ panel['dialogue'] }}</p>
+        </section>
+
+        <section class="dialogue-box">
+            <h2>Image:</h2>
+            <img src="{{ image }}" alt="Comic Panel Image" width="500">
+        </section>
+
+        <section class="dialogue-box">
+            <h2>Audio:</h2>
+            <audio controls>
+                <source src="{{ audio }}" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+    </main>
+
+    <footer>
+        <form action="/comic_panel" method="post">
+            {% if panel_number < total_panels %}
+                <button type="submit" name="next" class="continue-btn">Next Panel</button>
+            {% else %}
+                <p>End of Comic! Thank you for viewing.</p>
+            {% endif %}
+        </form>
+    </footer>
+
+    <!-- Include script for additional functionality -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
