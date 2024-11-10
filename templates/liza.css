@@ -1,0 +1,158 @@
+/* styles.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle at center, #a1d2fe, #6abee8, #6da5e0, #6e9de3);
+    overflow: hidden;;
+    font-family: 'Cinzel', sans-serif;
+    position: relative;
+    height: 100vh;
+    margin: 0;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+
+.small-title {
+    position: absolute;
+    top:40px;
+    left: 115px;
+    font-size: 40px;
+    color: #f0f8ff;
+    font-weight: bold;
+    font-family: Macondo, serif;
+}
+
+.navbar .logo img {
+    height: 90px; /* Smaller height */
+    width: auto;  /* Maintains aspect ratio */
+}
+.rabbit img {
+    position:absolute;
+    top: 200px;
+    left:700px;
+    height: 500px; /* Smaller height */
+    width: auto;  /* Maintains aspect ratio */
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ddd;
+}
+
+/* styles.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Dialogue box styling */
+.dialogue-box {
+    position: fixed;
+    bottom: 35%; /* Positioned near the bottom of the screen */
+    left: 30%;
+    transform: translateX(-50%);
+    background-color: #f0f8ff;
+    padding: 1.5rem;
+    height: 20%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    border: 2px solid #333;
+    align-items: center;
+
+}
+.parent-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dialogue-text {
+    text-align: center;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+    background-color: #f0f8ff;
+    font-size: xx-large;
+}
+
+/* Continue button */
+.continue-btn {
+    padding: 0.5rem 1rem;
+    margin-top: 10%;
+    margin-left: 39%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: right;
+    background-color: #f0f8ff;
+}
+
+.continue-btn:hover {
+    text-decoration:underline;
+}
+/* Star container styling */
+.star {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    opacity: 0.8;
+}
+/*  stars around the screen */
+.star:nth-child(1) { top: 50%; left: 20%; }
+.star:nth-child(2) { top: 15%; left: 80%; }
+.star:nth-child(3) { top: 25%; left: 40%; }
+.star:nth-child(4) { top: 30%; left: 60%; }
+.star:nth-child(5) { top: 35%; left: 10%; }
+.star:nth-child(6) { top: 40%; left: 70%; }
+.star:nth-child(7) { top: 50%; left: 20%; }
+.star:nth-child(8) { top: 55%; left: 80%; }
+.star:nth-child(9) { top: 65%; left: 30%; }
+.star:nth-child(10) { top: 70%; left: 90%; }
+.star:nth-child(11) { top: 80%; left: 50%; }
+.star:nth-child(12) { top: 85%; left: 15%; }
+.star:nth-child(13) { top: 90%; left: 70%; }
+
+.fade-in {
+    animation: fadeInEffect 0.5s ease-in;
+}
+
+@keyframes fadeInEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+

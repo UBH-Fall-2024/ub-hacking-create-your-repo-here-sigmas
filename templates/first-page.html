@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Navbar</title>
+    <link rel="stylesheet" href="first index.css">
+</head>
+<body class="fade-out">
+
+    <!-- Stars in the background -->
+    <div class="stars">
+        <div class="star" style="top: 50%; left: 20%;"></div>
+        <div class="star" style="top: 15%; left: 80%;"></div>
+        <div class="star" style="top: 25%; left: 40%;"></div>
+        <div class="star" style="top: 30%; left: 60%;"></div>
+        <div class="star" style="top: 35%; left: 10%;"></div>
+        <div class="star" style="top: 40%; left: 70%;"></div>
+        <div class="star" style="top: 50%; left: 20%;"></div>
+        <div class="star" style="top: 55%; left: 80%;"></div>
+        <div class="star" style="top: 65%; left: 30%;"></div>
+        <div class="star" style="top: 70%; left: 90%;"></div>
+        <div class="star" style="top: 80%; left: 50%;"></div>
+        <div class="star" style="top: 85%; left: 15%;"></div>
+        <div class="star" style="top: 90%; left: 70%;"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#" class="logo">
+            <img src="./logo1.png" alt="Logo">
+        </a>
+        <div class="small-title">WonderStrip</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Overlay for background dimming -->
+    <div class="overlay" id="overlay"></div>
+    <a href="#" class="cloud">
+        <img src="./cloud1.png" class="cloud1" alt="Cloud" >
+    </a>
+    <!-- Dialogue box -->
+    <div class="dialogue-box">
+        <p class="dialogue-text" id="dialogue-text">
+            <span class="welcome-text">Welcome,</span><br>
+            Every tale begins with you ,whether you’re dreaming up enchanted forests or futuristic galaxies!
+        </p>
+        <button class="continue-btn" onclick="openIndexPage()">Continue</button>
+    </div>
+
+    <script>
+        function openIndexPage() {
+            window.location.href = 'liza.html';
+        }
+    </script>
+
+</body>
+</html>
+
