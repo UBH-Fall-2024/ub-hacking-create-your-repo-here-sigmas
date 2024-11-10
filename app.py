@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.secret_key = 'supersecretkey'
 
 # Configure OpenAI API and Azure TTS
-openai.api_key = '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'
+openai.api_key = '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'
 speech_config = SpeechConfig(subscription="8xv0nkacjMKKNsYOYpi22YvFEi9Td8yLV8kvrKNqPhMMUF5sOuXbJQQJ99AKACYeBjFXJ3w3AAAYACOGuDU6", region="eastus")
 speech_config.speech_synthesis_voice_name = "en-US-JennyNeural"  # Sweet, natural voice
 
@@ -67,7 +67,9 @@ def generate_tts_audio(panels):
         synthesizer.speak_text(panel['dialogue'])
         audio_files.append(f"static/panel_{idx+1}.wav")
     return audio_files
-
+@app.route('/')
+def home():
+    return render_template('home.html')
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
@@ -85,9 +87,9 @@ def index():
         session['audio_files'] = audio_files
         session['current_panel'] = 0
 
-        return redirect(url_for('comic_panel'))
+        return redirect(url_for('comic_panel.html'))
 
-    return render_template('index.html')
+    return render_template('home.html')
 
 @app.route('/comic_panel', methods=['GET', 'POST'])
 def comic_panel():
